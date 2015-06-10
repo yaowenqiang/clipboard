@@ -48,8 +48,13 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-    {"type": "composer", "url": "http://pkg.phpcomposer.com/repo/packagist/"},
-        {"packagist": false}
-    ]
+      "repositories": [
+            {
+                "packagist": false
+            },
+            {
+                "type": "composer",
+                "url": "http://packagist.cn"
+            }
+        ]
 }
