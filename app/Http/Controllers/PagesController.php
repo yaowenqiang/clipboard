@@ -11,11 +11,13 @@ class PagesController extends Controller
 {
     public function index()
     {
-        return "Welcome to my website.";
+        //return "Welcome to my website.";
+        return view('pages.home');
     }
 
     public function about()
     {
-        return "About me?";
+        //return "About me?";
+        return view('pages.about');
     }
 }
