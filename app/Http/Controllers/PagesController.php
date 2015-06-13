@@ -12,7 +12,12 @@ class PagesController extends Controller
     public function index()
     {
         //return "Welcome to my website.";
-        return view('pages.home');
+        $lessons = [
+            "My First lesson",
+            "My First lesson",
+            "My First lesson"
+        ];
+        return view('pages.home',['lessons'=>$lessons]);
     }
 
     public function about()
