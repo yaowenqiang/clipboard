@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+@extends('master')
+
+@section('content')
     About Me?
-</body>
-</html>
+@stop
+
+@section('footer')
+<script>
+    alert('about page footer')
+</script>
+@stop
