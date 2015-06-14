@@ -1,12 +1,4 @@
 <?php
-function delete_form($routeParams,$label='Delete')
-{
-    $form  = Form::open(['method'=>'DELETE','route'=>$routeParams]);
-
-    $form .= Form::submit($label,['class'=>'btn btn-danger']);
-
-    return $form.Form::close();
-}
 //Route::model('song','App\Songs');
 //Route::bind('song',function($slug){
     ////return App\Songs::whereSlug($slug)->first();
