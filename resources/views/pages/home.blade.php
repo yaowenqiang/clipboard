@@ -15,3 +15,6 @@
 @section('content')
     Home Page
 @stop
+@if (1 + 1 == 2)
+1 + 1 = 2
+@endif
