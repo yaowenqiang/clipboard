@@ -15,9 +15,10 @@ class SongsController extends Controller
         //dd($songs);// die(var_dump($songs));
         return view('songs.index',compact('songs'));
     }
-    public function show($id)
+    public function show($slug)
     {
-        $song = Songs::find($id);
+        //$song = Songs::find($id);
+        $song = Songs::whereSlug($slug)->first();
         return view('songs.show',compact('song'));
     }
 
