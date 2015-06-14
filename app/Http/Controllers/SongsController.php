@@ -45,7 +45,7 @@ class SongsController extends Controller
      * @return void
      * @author Steve Francia <steve.francia@gmail.com>
      */
-    public function update($slug,Request $request)
+    public function update($slug,\App\Http\Requests\CreateSongRequest $request)
     {
         //dd(\Request::all());
         //dd(\Request::input());
@@ -70,7 +70,7 @@ class SongsController extends Controller
         return view('songs.create');
     }
 
-    public function store(Request $request,Songs $song)
+    public function store(\App\Http\Requests\CreateSongRequest $request,Songs $song)
     {
         //$input = $request->all();
         $song->create($request->all());
