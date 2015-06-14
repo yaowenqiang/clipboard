@@ -18,7 +18,8 @@ class PagesController extends Controller
             "My First lesson"
         ];
         $name = "Jacky yao";
-        return view('pages.home',['lessons'=>$lessons,'name'=>$name]);
+        $name2 = "<em>i am a tag wrapped string</em>";
+        return view('pages.home',['lessons'=>$lessons,'name'=>$name,'name2'=>$name2]);
     }
 
     public function about()

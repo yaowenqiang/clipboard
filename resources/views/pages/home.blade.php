@@ -4,6 +4,10 @@
 <?php endforeach;?>
 <h1>
 {{ $name }}
+<br>
+{{ $name2 }}
+<br>
+{!! $name2 !!}
 </h1>
 @section('content')
     Home Page
