@@ -34,3 +34,4 @@ get('songs',"SongsController@index");
 get('songs/{slug}',"SongsController@show");
 //get('songs/{song}/edit','SongsController@edit');
 get('songs/{slug}/edit','SongsController@edit');
+patch('songs/{slug}','SongsController@update');

@@ -38,6 +38,25 @@ class SongsController extends Controller
         $song = $this->song->whereSlug($slug)->first();
         return view('songs.edit',compact('song'));
     }
+    /**
+     * update song
+     *
+     * @return void
+     * @author Steve Francia <steve.francia@gmail.com>
+     */
+    public function update($slug,Request $request)
+    {
+        //dd(\Request::all());
+        //dd(\Request::input());
+        //dd(\Request::get('title'));
+        //return "Update the song";
+        $song = $this->song->whereSlug($slug)->first();
+        //$song->title = $request->get('title');
+        //$song->save();
+        //$song->fill(['title'=>$request->get('title')])->save();
+        $song->fill($request->input())->save();
+        return redirect('songs');
+    }
 
     private  function getSongs()
     {
