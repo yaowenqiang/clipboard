@@ -21,7 +21,8 @@ class PagesController extends Controller
         $name2 = "<em>i am a tag wrapped string</em>";
         //return view('pages.home',['lessons'=>$lessons,'name'=>$name,'name2'=>$name2]);
         //return view('pages.home',compact('lessons','name','name2'));
-        return view('pages.home')->with('lessons',$lessons)->with('name',$name)->with('name2',$name2);
+        //return view('pages.home')->with('lessons',$lessons)->with('name',$name)->with('name2',$name2);
+        return view('pages.home')->withLessons($lessons)->withName($name)->withName2($name2);
     }
 
     public function about()
