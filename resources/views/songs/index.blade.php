@@ -4,9 +4,9 @@
 <h1>
     Justing Bieber Official Fan Club
 </h1>
-@foreach ($songs as $song)
+@foreach ($songs as $index => $song)
 <li>
-    {{ $song }}
+    <a href="/songs/{{ $index }}">{{ $song }}</a>
 </li>
 @endforeach
 @stop

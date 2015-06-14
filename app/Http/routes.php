@@ -24,4 +24,5 @@ Route::get('/about/', 'PagesController@about');
 Route::get('/about/', 'PagesController@about');
 //router->get()
 //get()
-get('songs',"SonssController@index");
+get('songs',"SongsController@index");
+get('songs/{id}',"SongsController@show");
