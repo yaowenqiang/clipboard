@@ -11,7 +11,8 @@ class Songs extends Model
     */
     protected $fillable = [
         'title',
-        'lyrics'
+        'lyrics',
+        'slug'
     ];
 }
 

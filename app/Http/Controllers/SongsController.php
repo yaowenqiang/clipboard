@@ -59,6 +59,25 @@ class SongsController extends Controller
         return redirect('songs');
     }
 
+    /**
+     * create a song
+     *
+     * @return void
+     * @author Steve Francia <steve.francia@gmail.com>
+     */
+    public function create()
+    {
+        return view('songs.create');
+    }
+
+    public function store(Request $request,Songs $song)
+    {
+        //$input = $request->all();
+        $song->create($request->all());
+        //return redirect('songs');
+        return redirect()->route('songs.index');
+
+    }
     private  function getSongs()
     {
         return ['Boyfriend' ,"Be Allright",'Fail'];

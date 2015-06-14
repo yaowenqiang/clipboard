@@ -58,9 +58,16 @@
 //
 
 // named routes.
-Route::bind('songs',function($slug){
-    //return App\Songs::whereSlug($slug)->first();
-    return App\Songs::where(['slug',$slug])->first();
-});
-get('music',['as'=>'songs_path','uses'=>"SongsController@index"]);
-get('music/{song}',['as'=>'song_path','uses'=>"SongsController@show"]);
+//Route::bind('songs',function($slug){
+    ////return App\Songs::whereSlug($slug)->first();
+    //return App\Songs::where(['slug',$slug])->first();
+//});
+//Route::bind('songs',function($slug){
+    ////return App\Songs::whereSlug($slug)->first();
+    //return App\Songs::where(['slug',$slug])->first();
+//});
+//$router->resource('songs','SongsController');
+//get('music',['as'=>'songs_path','uses'=>"SongsController@index"]);
+//get('music/{song}',['as'=>'song_path','uses'=>"SongsController@show"]);
+//get('music/{song}/edit',['as'=>'song_path','uses'=>"SongsController@edit"]);
+$router->resource('songs','SongsController');
