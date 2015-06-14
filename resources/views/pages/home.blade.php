@@ -9,6 +9,9 @@
 <br>
 {!! $name2 !!}
 </h1>
+@foreach ($lessons as $lesson)
+    <h2>{{ $lesson }}</h2>
+@endforeach
 @section('content')
     Home Page
 @stop
