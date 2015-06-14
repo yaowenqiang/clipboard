@@ -10,7 +10,8 @@
         "barryvdh/laravel-debugbar": "^2.0@dev",
         "fzaninotto/faker": "^1.6@dev",
         "itsgoingd/clockwork": "~1.7",
-        "frozennode/administrator": "5.*"
+        "frozennode/administrator": "5.*",
+        "illuminate/html": "^5.0@dev"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

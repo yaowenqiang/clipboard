@@ -31,7 +31,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------
     |
     | Here you may specify the default timezone for your application, which
     | will be used by the PHP date and date-time functions. We have gone
@@ -136,6 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
 
@@ -195,7 +196,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Clockwork' => 'Clockwork\Support\Laravel\Facade',
+        'Form'      => Illuminate\Html\FormFacade::class,
+        'Clockwork' => Clockwork\Support\Laravel\Facade::class,
 
 
     ],

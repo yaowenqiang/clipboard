@@ -31,5 +31,6 @@ Route::get('/about/', 'PagesController@about');
 //get()
 get('songs',"SongsController@index");
 //get('songs/{id}',"SongsController@show");
-get('songs/{song}',"SongsController@show");
-get('songs/{song}/edit','SongsController@edit');
+get('songs/{slug}',"SongsController@show");
+//get('songs/{song}/edit','SongsController@edit');
+get('songs/{slug}/edit','SongsController@edit');
