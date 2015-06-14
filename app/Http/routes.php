@@ -1,5 +1,10 @@
 <?php
+//Route::model('song','App\Songs');
+Route::bind('song',function($slug){
+    return App\Songs::whereSlug($slug)->first();
+    return App\Songs::where(['slug',$slug])->first();
 
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,4 +30,6 @@ Route::get('/about/', 'PagesController@about');
 //router->get()
 //get()
 get('songs',"SongsController@index");
-get('songs/{id}',"SongsController@show");
+//get('songs/{id}',"SongsController@show");
+get('songs/{song}',"SongsController@show");
+get('songs/{song}/edit','SongsController@edit');
