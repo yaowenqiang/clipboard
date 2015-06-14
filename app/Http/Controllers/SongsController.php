@@ -78,6 +78,14 @@ class SongsController extends Controller
         return redirect()->route('songs.index');
 
     }
+    public function destroy($slug)
+    {
+        $song = $this->song->whereSlug($slug)->first();
+        $song->delete();
+        return redirect('songs');
+        //return redirect()->route('songs.index');
+
+    }
     private  function getSongs()
     {
         return ['Boyfriend' ,"Be Allright",'Fail'];
