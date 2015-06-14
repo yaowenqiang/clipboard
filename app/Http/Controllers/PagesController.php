@@ -17,7 +17,8 @@ class PagesController extends Controller
             "My First lesson",
             "My First lesson"
         ];
-        return view('pages.home',['lessons'=>$lessons]);
+        $name = "Jacky yao";
+        return view('pages.home',['lessons'=>$lessons,'name'=>$name]);
     }
 
     public function about()
