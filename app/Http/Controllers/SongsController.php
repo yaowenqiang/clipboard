@@ -27,6 +27,7 @@ class SongsController extends Controller
     //public function show($slug,Songs $song)
     public function show($slug)
     {
+        //dd($slug);
         //$song = Songs::find($id);
         $song = $this->song->whereSlug($slug)->first();
         return view('songs.show',compact('song'));
