@@ -1,9 +1,8 @@
 <?php
 //Route::model('song','App\Songs');
 Route::bind('song',function($slug){
-    return App\Songs::whereSlug($slug)->first();
+    //return App\Songs::whereSlug($slug)->first();
     return App\Songs::where(['slug',$slug])->first();
-
 });
 /*
 |--------------------------------------------------------------------------
@@ -16,22 +15,40 @@ Route::bind('song',function($slug){
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+    //return view('welcome');
+//});
 //Route::get('/user/', function () {
     //return view('user');
 //});
-Route::get('/user/', 'UserController@index');
-Route::get('/pages/', 'PagesController@index');
-Route::get('/about/', 'PagesController@about');
+//Route::get('/user/', 'UserController@index');
+//Route::get('/pages/', 'PagesController@index');
+//Route::get('/about/', 'PagesController@about');
 
-Route::get('/about/', 'PagesController@about');
+//Route::get('/about/', 'PagesController@about');
 //router->get()
 //get()
-get('songs',"SongsController@index");
-//get('songs/{id}',"SongsController@show");
-get('songs/{slug}',"SongsController@show");
-//get('songs/{song}/edit','SongsController@edit');
-get('songs/{slug}/edit','SongsController@edit');
-patch('songs/{slug}','SongsController@update');
+//get('songs',"SongsController@index");
+////get('songs/{id}',"SongsController@show");
+//get('songs/{slug}',"SongsController@show");
+////get('songs/{song}/edit','SongsController@edit');
+//get('songs/{slug}/edit','SongsController@edit');
+//patch('songs/{slug}','SongsController@update');
+//Route::bind('songs',function($song){});
+//$router->resource('songs','SongsController',[
+    //'only'=>[
+        //'index','show','edit','update'
+    //]
+    //////'except'=>[
+        //////'index','show','edit','update'
+    //////]
+//]);
+$router->resource('songs','SongsController',[
+    //'only'=>[
+        //'index','show','edit','update'
+    //]
+    ////'except'=>[
+        ////'index','show','edit','update'
+    ////]
+]);
+//$router->resource('people','PeopleController');

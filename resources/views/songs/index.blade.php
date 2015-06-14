@@ -3,7 +3,7 @@
 @section('content')
 @foreach ($songs as $song)
 <li>
-    <a href="/songs/{{ $song->id }}">{{ $song->title }}</a>
+    <a href="/songs/{{ $song->slug }}">{{ $song->title }}</a>
 </li>
 @endforeach
 @stop
