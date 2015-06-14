@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/user/', 'UserController@index');
 Route::get('/pages/', 'PagesController@index');
 Route::get('/about/', 'PagesController@about');
+
+Route::get('/about/', 'PagesController@about');
+//router->get()
+//get()
+get('songs',"SonssController@index");
